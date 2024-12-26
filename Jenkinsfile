@@ -28,7 +28,7 @@ pipeline {
                 script {
                     sh '''
                     # Build patient_record_service
-                    docker build -t ${PATIENT_RECORD_SERVICE_REPO}:${IMAGE_TAG} ./patient_record_service
+                    sudo docker build -t ${PATIENT_RECORD_SERVICE_REPO}:${IMAGE_TAG} ./patient_record_service
 
                     # Build appointment_service
                     #docker build -t ${APPOINTMENT_SERVICE_REPO}:${IMAGE_TAG} ./appointment_service
@@ -52,7 +52,7 @@ pipeline {
                     aws ecr get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${PATIENT_RECORD_SERVICE_REPO}
 
                     # Push patient_record_service
-                    docker push ${PATIENT_RECORD_SERVICE_REPO}:${IMAGE_TAG}
+                    sudo docker push ${PATIENT_RECORD_SERVICE_REPO}:${IMAGE_TAG}
 
                     # Push appointment_service
                     #docker push ${APPOINTMENT_SERVICE_REPO}:${IMAGE_TAG}
