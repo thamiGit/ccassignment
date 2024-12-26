@@ -9,7 +9,7 @@ pipeline {
         IMAGE_TAG = 'latest'
 
         // ECR Repositories for Microservices
-        PATIENT_RECORD_SERVICE_REPO = '354918398452.dkr.ecr.us-east-1.amazonaws.com/healthsync/patient_record_service'
+        PATIENT_RECORD_SERVICE_REPO = '664418989397.dkr.ecr.us-east-1.amazonaws.com/patient_record_service'
         //APPOINTMENT_SERVICE_REPO = '354918398452.dkr.ecr.us-east-1.amazonaws.com/healthsync/appointment_service'
         //DOCTOR_SERVICE_REPO = '354918398452.dkr.ecr.us-east-1.amazonaws.com/healthsync/doctor_service'
         //BILLING_SERVICE_REPO = '354918398452.dkr.ecr.us-east-1.amazonaws.com/healthsync/billing_service'
