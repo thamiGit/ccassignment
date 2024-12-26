@@ -27,6 +27,10 @@ pipeline {
                 echo "Building Docker images for all microservices..."
                 script {
                     sh '''
+
+                    # Authenticate with ECR
+                    aws ecr get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${PATIENT_RECORD_SERVICE_REPO}
+                    
                     # Build patient_record_service
                     sudo docker build -t ${PATIENT_RECORD_SERVICE_REPO}:${IMAGE_TAG} ./patient_record_service
 
