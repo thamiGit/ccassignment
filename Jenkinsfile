@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     environment {
-        AWS_ACCESS_KEY_ID = 'AKIAVFIWI7H2KV4XOTUE'
-        AWS_SECRET_ACCESS_KEY = '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'
+        AWS_ACCESS_KEY_ID = 'AKIAZVMTVGVKRROKK6DF'
+        AWS_SECRET_ACCESS_KEY = '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'
         AWS_DEFAULT_REGION = 'us-east-1'
-        CLUSTER_NAME = 'MyCluster'
+        CLUSTER_NAME = 'Cloud-Cluster'
         IMAGE_TAG = 'latest'
 
         // ECR Repositories for Microservices
